@@ -22,22 +22,41 @@ Este projeto foi desenvolvido para criar uma interface visual atraente para exib
 ## Estrutura do Projeto
 
 mir4_card/
+
 ├── index.html
+
 ├── css/
+
 │   └── styles.css
+
 ├── js/
+
 │   └── scripts.js
+
 ├── img/
+
 │   ├── warrior-icon.png
+
 │   ├── warrior-card.png
+
 │   ├── lancer-icon.png
+
 │   ├── lancer-card.png
+
 │   ├── taoist-icon.png
+
 │   ├── taoist-card.png
+
 │   ├── arbalist-icon.png
+
 │   ├── arbalist-card.png
+
 │   ├── darkist-icon.png
+
 │   ├── darkist-card.png
+
 │   ├── sorcerer-icon.png
+
 │   └── sorcerer-card.png
+
 └── bg-item-legendary.webp
