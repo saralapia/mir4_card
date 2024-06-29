@@ -60,3 +60,6 @@ mir4_card/
 │   └── sorcerer-card.png
 
 └── bg-item-legendary.webp
+
+![image](https://github.com/saralapia/mir4_card/assets/174060726/eadcf2df-40d2-4b60-941c-c05a4caa4911)
+
