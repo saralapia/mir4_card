@@ -6,11 +6,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding: 0; /* Adicionado para remover qualquer padding padrão */
+    width: 100vw; /* Garante que o body ocupe 100% da largura da viewport */
+    overflow-x: hidden; /* Previne o scroll horizontal */
 }
 
 .video-banner-container {
     position: relative;
-    width: 100%;
+    width: 100vw; /* Ajuste para ocupar 100% da largura da viewport */
     height: 300px; /* Ajuste conforme necessário */
     overflow: hidden;
 }
