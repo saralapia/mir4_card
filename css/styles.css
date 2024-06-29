@@ -99,13 +99,14 @@ body {
 .score {
     font-size: 1.5rem; /* Ajuste usando unidades relativas */
     color: #ffdd33;
+    font-weight: bold;
 }
 
 .score-box {
     background-color: #ffdd33;
     padding: 10px;
-    border-radius: 0 0 10px 10px;
-    position: absolute;
+    border-radius: 0 0 0 0;
+    /*position: absolute; */
     bottom: 0;
     width: 100%;
     font-size: 1rem; /* Ajuste usando unidades relativas */
@@ -184,6 +185,7 @@ body {
     }
 }
 
+/*
 @media (max-width: 768px) {
     .card {
         width: 180px;
@@ -233,3 +235,4 @@ body {
         font-size: 0.6rem;
     }
 }
+*/
