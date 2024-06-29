@@ -3,15 +3,56 @@ body {
     color: #fff;
     font-family: Roboto, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
+}
+
+.video-banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajuste conforme necessário */
+    overflow: hidden;
+}
+
+.video-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(197, 212, 62, 0.5), rgba(15, 15, 35, 0.5));
+}
+
+.video-banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.video-banner-content h1 {
+    font-size: 3rem; /* Ajuste conforme necessário */
+    margin: 0;
+}
+
+.video-banner-content p {
+    font-size: 1.5rem; /* Ajuste conforme necessário */
+    margin: 10px 0 0;
 }
 
 .cards-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards se ajustem em múltiplas linhas */
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -66,7 +107,7 @@ body {
 }
 
 .level {
-    font-size: 1rem; /* Ajuste usando unidades relativas */
+    font-size: 1rem;
     font-weight: bold;
     background: #ffdd33;
     padding: 6px 16px;
@@ -76,28 +117,28 @@ body {
 
 .card-content {
     padding: 5px;
-    background: rgba(28, 28, 61, 0.8); /* Adicione um fundo semi-transparente para destacar o texto */
+    background: rgba(28, 28, 61, 0.8);
     border-radius: 5px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha o conteúdo no topo */
-    font-size: 1rem; /* Ajuste usando unidades relativas */
+    justify-content: flex-start;
+    font-size: 1rem;
 }
 
 .card-content h2 {
-    font-size: 1.125rem; /* Ajuste usando unidades relativas */
+    font-size: 1.125rem;
     margin: 5px 1px;
-    word-wrap: break-word; /* Quebra de linha para texto longo */
+    word-wrap: break-word;
 }
 
 .card-content p {
     margin: 6px 10%;
-    word-wrap: break-word; /* Quebra de linha para texto longo */
+    word-wrap: break-word;
 }
 
 .score {
-    font-size: 1.5rem; /* Ajuste usando unidades relativas */
+    font-size: 1.5rem;
     color: #ffdd33;
     font-weight: bold;
 }
@@ -105,16 +146,13 @@ body {
 .score-box {
     background-color: #ffdd33;
     padding: 10px;
-    border-radius: 0 0 0 0;
-    /*position: absolute; */
-    bottom: 0;
     width: 100%;
-    font-size: 1rem; /* Ajuste usando unidades relativas */
+    font-size: 1rem;
 }
 
 .score-box p {
     margin: 0;
-    font-size: 1rem; /* Ajuste usando unidades relativas */
+    font-size: 1rem;
     color: #1c1c3d;
 }
 
@@ -134,7 +172,6 @@ body {
     opacity: 1;
 }
 
-/* Responsividade */
 @media (max-width: 1200px) {
     .card {
         width: 200px;
@@ -184,55 +221,3 @@ body {
         font-size: 0.8rem;
     }
 }
-
-/*
-@media (max-width: 768px) {
-    .card {
-        width: 180px;
-        height: 324px;
-    }
-    .character-image {
-        height: 156px;
-    }
-    .level {
-        font-size: 0.7rem;
-    }
-    .card-content {
-        font-size: 0.7rem;
-    }
-    .card-content h2 {
-        font-size: 0.8rem;
-    }
-    .score {
-        font-size: 1.125rem;
-    }
-    .score-box p {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .card {
-        width: 160px;
-        height: 288px;
-    }
-    .character-image {
-        height: 140px;
-    }
-    .level {
-        font-size: 0.6rem;
-    }
-    .card-content {
-        font-size: 0.6rem;
-    }
-    .card-content h2 {
-        font-size: 0.7rem;
-    }
-    .score {
-        font-size: 0.6rem;
-    }
-    .score-box p {
-        font-size: 0.6rem;
-    }
-}
-*/
