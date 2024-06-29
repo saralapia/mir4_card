@@ -6,14 +6,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    padding: 0; /* Adicionado para remover qualquer padding padrão */
+    padding: 0; /* Remover qualquer padding padrão */
     width: 100vw; /* Garante que o body ocupe 100% da largura da viewport */
     overflow-x: hidden; /* Previne o scroll horizontal */
 }
 
 .video-banner-container {
     position: relative;
-    width: 100vw; /* Ajuste para ocupar 100% da largura da viewport */
+    width: 100%; /* Ajuste para ocupar 100% da largura da viewport */
     height: 300px; /* Ajuste conforme necessário */
     overflow: hidden;
 }
@@ -22,6 +22,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block; /* Garante que o vídeo seja exibido como um bloco */
 }
 
 .video-overlay {
@@ -144,7 +145,22 @@ body {
     font-size: 1.5rem;
     color: #ffdd33;
     font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Certifica-se de que o conteúdo está centralizado horizontalmente */
 }
+
+.score::before {
+    content: "";
+    background: url('/img/icon-power.png') no-repeat center center;
+    background-size: contain;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    filter: brightness(0) invert(1); /* Torna o ícone branco */
+}
+
 
 .score-box {
     background-color: #ffdd33;
