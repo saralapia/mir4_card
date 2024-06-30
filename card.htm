@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Cards</title>
+    <title>Player Dashboard</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="video-banner-container">
-        <video autoplay muted loop class="video-banner">
+        <video class="video-banner" autoplay muted loop playsinline>
             <source src="mp4/bg-nft-top.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -18,104 +20,153 @@
             <p>My Character, Your Legacy</p>
         </div>
     </div>
-    <div class="cards-container">
-        <div class="card">
-            <div class="card-header">
-                <img src="/img/warrior-icon.png" alt="Class Icon" class="class-icon">
-                <span class="level">Level 152</span>
+    <div class="tabs-container">
+        <button class="tab-button active" data-target="characters">Characters</button>
+        <button class="tab-button" data-target="account">Account</button>
+    </div>
+    <div id="characters" class="tab-content active">
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="/img/warrior-icon.png" alt="Class Icon" class="class-icon">
+                    <span class="level">Level 152</span>
+                </div>
+                <img src="/img/warrior-card.png" alt="Character 1" class="character-image">
+                <div class="card-content">
+                    <h2>SaraLapia ツ</h2>
+                    <p>Warrior</p>
+                    <p class="score">420,071</p>
+                    <p>Server: AVA001</p>
+                </div>
+                <div class="score-box">
+                    <p>Last login: 19:44 - 29-06-2024</p>
+                </div>
             </div>
-            <img src="/img/warrior-card.png" alt="Character 1" class="character-image">
-            <div class="card-content">
-                <h2>SaraLapia ツ</h2>
-                <p>Warrior</p>
-                <p class="score">420,071</p>
-                <p>MIRAGE Score: 1,764,596</p>
+            <div class="card">
+                <div class="card-header">
+                    <img src="/img/lancer-icon.png" alt="Class Icon" class="class-icon">
+                    <span class="level">Level 152</span>
+                </div>
+                <img src="/img/lancer-card.png" alt="Character 2" class="character-image">
+                <div class="card-content">
+                    <h2>SaraLapia ツ</h2>
+                    <p>Lancer</p>
+                    <p class="score">400,072</p>
+                    <p>Server: AVA002</p>
+                </div>
+                <div class="score-box">
+                    <p>Last login: 19:44 - 29-06-2024</p>
+                </div>
             </div>
-            <div class="score-box">
-                <p>13,000</p>
+            <div class="card">
+                <div class="card-header">
+                    <img src="/img/taoist-icon.png" alt="Class Icon" class="class-icon">
+                    <span class="level">Level 160</span>
+                </div>
+                <img src="/img/taoist-card.png" alt="Character 3" class="character-image">
+                <div class="card-content">
+                    <h2>SaraLapia ツ</h2>
+                    <p>Taoist</p>
+                    <p class="score">384,419</p>
+                    <p>Server: AVA003</p>
+                </div>
+                <div class="score-box">
+                    <p>Last login: 19:44 - 29-06-2024</p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="/img/lancer-icon.png" alt="Class Icon" class="class-icon">
-                <span class="level">Level 152</span>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/arbalist-icon.png" alt="Class Icon" class="class-icon">
+                    <span class="level">Level 152</span>
+                </div>
+                <img src="/img/arbalist-card.png" alt="Character 4" class="character-image">
+                <div class="card-content">
+                    <h2>SaraLapia ツ</h2>
+                    <p>Arbalist</p>
+                    <p class="score">383,232</p>
+                    <p>Server: AVA004</p>
+                </div>
+                <div class="score-box">
+                    <p>Last login: 19:44 - 29-06-2024</p>
+                </div>
             </div>
-            <img src="/img/lancer-card.png" alt="Character 2" class="character-image">
-            <div class="card-content">
-                <h2>SaraLapia ツ</h2>
-                <p>Lancer</p>
-                <p class="score">400,072</p>
-                <p>MIRAGE Score: 1,600,576</p>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/darkist-icon.png" alt="Class Icon" class="class-icon">
+                    <span class="level">Level 152</span>
+                </div>
+                <img src="/img/darkist-card.png" alt="Character 4" class="character-image">
+                <div class="card-content">
+                    <h2>SaraLapia ツ</h2>
+                    <p>Darkist</p>
+                    <p class="score">383,232</p>
+                    <p>Server: AVA005</p>
+                </div>
+                <div class="score-box">
+                    <p>Last login: 19:44 - 29-06-2024</p>
+                </div>
             </div>
-            <div class="score-box">
-                <p>7,800</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="/img/taoist-icon.png" alt="Class Icon" class="class-icon">
-                <span class="level">Level 160</span>
-            </div>
-            <img src="/img/taoist-card.png" alt="Character 3" class="character-image">
-            <div class="card-content">
-                <h2>SaraLapia ツ</h2>
-                <p>Taoist</p>
-                <p class="score">384,419</p>
-                <p>MIRAGE Score: 1,477,780</p>
-            </div>
-            <div class="score-box">
-                <p>7,500</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="img/arbalist-icon.png" alt="Class Icon" class="class-icon">
-                <span class="level">Level 152</span>
-            </div>
-            <img src="/img/arbalist-card.png" alt="Character 4" class="character-image">
-            <div class="card-content">
-                <h2>SaraLapia ツ</h2>
-                <p>Arbalist</p>
-                <p class="score">383,232</p>
-                <p>MIRAGE Score: 1,468,668</p>
-            </div>
-            <div class="score-box">
-                <p>5,000</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="img/darkist-icon.png" alt="Class Icon" class="class-icon">
-                <span class="level">Level 152</span>
-            </div>
-            <img src="/img/darkist-card.png" alt="Character 4" class="character-image">
-            <div class="card-content">
-                <h2>SaraLapia ツ</h2>
-                <p>Darkist</p>
-                <p class="score">383,232</p>
-                <p>MIRAGE Score: 1,468,668</p>
-            </div>
-            <div class="score-box">
-                <p>5,000</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="img/sorcerer-icon.png" alt="Class Icon" class="class-icon">
-                <span class="level">Level 152</span>
-            </div>
-            <img src="/img/sorcerer-card.png" alt="Character 4" class="character-image">
-            <div class="card-content">
-                <h2>SaraLapia ツ</h2>
-                <p>Sorcerer</p>
-                <p class="score">383,232</p>
-                <p>MIRAGE Score: 1,468,668</p>
-            </div>
-            <div class="score-box">
-                <p>5,000</p>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/sorcerer-icon.png" alt="Class Icon" class="class-icon">
+                    <span class="level">Level 152</span>
+                </div>
+                <img src="/img/sorcerer-card.png" alt="Character 4" class="character-image">
+                <div class="card-content">
+                    <h2>SaraLapia ツ</h2>
+                    <p>Sorcerer</p>
+                    <p class="score">383,232</p>
+                    <p>Server: AVA006</p>
+                </div>
+                <div class="score-box">
+                    <p>Last login: 19:44 - 29-06-2024</p>
+                </div>
             </div>
         </div>
     </div>
+    <div id="account" class="tab-content">
+        <div id="message" class="message"></div>
+        <form class="account-form" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span class="toggle-password" onclick="togglePassword('password')">
+                    <img src="img/open-eye.png" id="password-icon" class="password-icon" alt="Show Password">
+                </span>
+            </div>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <div class="password-container">
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span class="toggle-password" onclick="togglePassword('confirm-password')">
+                    <img src="img/open-eye.png" id="confirm-password-icon" class="password-icon" alt="Show Password">
+                </span>
+            </div>
+            <div id="password-match" class="password-match"></div>
+            
+            <button type="submit">Update</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 AVA Mir4. Todos os direitos reservados.</p>
+        <p>
+            <a href="#">Política de Privacidade</a> | 
+            <a href="#">Termos de Serviço</a> | 
+            <a href="#">Contato</a>
+        </p>
+        <p>Siga-nos nas redes sociais:</p>
+        <p>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-globe"></i></a>
+        </p>
+    </footer>    
     <script src="/js/script.js"></script>
 </body>
 </html>
