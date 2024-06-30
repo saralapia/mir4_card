@@ -57,15 +57,60 @@ body {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 0.5rem;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 1920px;
-    padding: 20px;
+    max-width: 1900px;
+    margin: 20px auto; /* Adicione margem superior e inferior */
 }
 
-.card {
+
+
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.tab-button {
+    background-color: #1c1c3d;
+    border: 2px solid #ffdd57;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active, .tab-button:hover {
+    background-color: #ffdd57;
+    color: #141428;
+}
+
+/* Estilos gerais para a estrutura das abas */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Estilos específicos para a aba Characters */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1900px;
+    margin: 20px auto 40px auto; /* Margem superior de 20px e inferior de 40px */
+}
+
+
+#characters .card {
     background-color: #1c1c3d;
     border: 2px solid #ffdd33;
     border-radius: 10px;
@@ -85,18 +130,18 @@ body {
     animation: rotateBackground 60s infinite linear, glowEffect 2s infinite;
 }
 
-.card:hover {
+#characters .card:hover {
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
 }
 
-.character-image {
+#characters .character-image {
     width: 75%;
     height: 210px;
     object-fit: cover;
     margin: 15px auto;
 }
 
-.card-header {
+#characters .card-header {
     position: absolute;
     width: 100%;
     top: 10px;
@@ -105,12 +150,13 @@ body {
     padding: 0 10px;
 }
 
-.class-icon {
+
+#characters .class-icon {
     width: 30px;
     height: 30px;
 }
 
-.level {
+#characters .level {
     font-size: 1rem;
     font-weight: bold;
     background: #ffdd33;
@@ -119,8 +165,8 @@ body {
     color: #1c1c3d;
 }
 
-.card-content {
-    padding: 5px;
+#characters .card-content {
+    padding: 15px;
     background: rgba(28, 28, 61, 0.8);
     border-radius: 5px;
     flex-grow: 1;
@@ -130,52 +176,51 @@ body {
     font-size: 1rem;
 }
 
-.card-content h2 {
+#characters .card-content h2 {
     font-size: 1.125rem;
     margin: 5px 1px;
     word-wrap: break-word;
 }
 
-.card-content p {
-    margin: 6px 10%;
+#characters .card-content p {
+    margin: 6px 20%;
     word-wrap: break-word;
 }
 
-.score {
+#characters .score {
     font-size: 1.5rem;
     color: #ffdd33;
     font-weight: bold;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; /* Certifica-se de que o conteúdo está centralizado horizontalmente */
+    justify-content: center;
 }
 
-.score::before {
+#characters .score::before {
     content: "";
     background: url('/img/icon-power.png') no-repeat center center;
     background-size: contain;
-    width: 20px; /* Ajuste conforme necessário */
-    height: 20px; /* Ajuste conforme necessário */
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
-    filter: brightness(0) invert(1); /* Torna o ícone branco */
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1);
 }
 
-
-.score-box {
+#characters .score-box {
     background-color: #ffdd33;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     font-size: 1rem;
 }
 
-.score-box p {
+#characters .score-box p {
     margin: 0;
     font-size: 1rem;
     color: #1c1c3d;
 }
 
-.reflection {
+#characters .reflection {
     position: absolute;
     top: 0;
     left: 0;
@@ -187,9 +232,129 @@ body {
     transition: opacity 0.1s ease;
 }
 
-.card:hover .reflection {
+#characters .card:hover .reflection {
     opacity: 1;
 }
+
+/* Estilos específicos para a aba Account */
+#account.tab-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #1c1c3d;
+    border: 2px solid #ffdd57;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-form label {
+    margin-bottom: 5px;
+}
+
+.account-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ffdd57;
+    color: #141428;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e5c147;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.password-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+.password-container input {
+    flex-grow: 1;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 5px;
+    height: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.password-match {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 10px;
+    background-color: #ffdd57;
+    color: #141428;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1c1c3d; /* Cor de fundo escura */
+    color: #ffdd33; /* Texto dourado */
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ffdd33; /* Borda superior dourada */
+    width: 100%; /* Garante que o footer ocupe 100% da largura */
+    position: relative; /* Altera para relativo */
+    bottom: 0;
+    left: 0;
+}
+
+
+footer a {
+    color: #ffdd33;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer i {
+    font-size: 20px; /* Define o tamanho dos ícones */
+    color: yellow; /* Define a cor dos ícones como amarelo */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona transição suave */
+}
+
+footer i:hover {
+    color: white; /* Muda a cor dos ícones para branco ao passar o mouse */
+    transform: scale(1.1); /* Adiciona um leve aumento no tamanho ao passar o mouse */
+}
+
+
+
+
+
 
 @media (max-width: 1200px) {
     .card {
